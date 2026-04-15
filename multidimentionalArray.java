@@ -14,5 +14,14 @@ class multidimentionalArray {
       }
       System.out.println();
     }
+
+    //enhanced for loop;
+
+    for(int p[] : arr) {
+      for (int num: p) {
+        System.out.print(num + " ");
+      }
+      System.out.println();
+    }
   }
 }
