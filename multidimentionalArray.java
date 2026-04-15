@@ -23,5 +23,28 @@ class multidimentionalArray {
       }
       System.out.println();
     }
+
+
+    // jagged array where the j is not fixed;
+    System.out.println("Now the jagged array.");
+
+    int jagged [][] = new int [3][];
+
+    for(int i=0; i<3; i++) {
+      jagged[i] = new int [i+2];
+    }
+
+    for(int i=0; i<jagged.length; i++) {
+      for(int j=0; j<jagged[i].length; j++) {
+        jagged[i][j] = (int)(Math.random() * 10);
+      }
+    }
+
+    for(int p[] : jagged) {
+      for (int num: p) {
+        System.out.print(num + " ");
+      }
+      System.out.println();
+    }
   }
 }
