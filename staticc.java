@@ -28,6 +28,8 @@ public class staticc {
     deepak2.rollno = 2;
     deepak2.schoolName = "xyz";
 
+    System.out.println(student.schoolName); // used the class name for static variable
+
     deepak.getdata(); // deepak 1 xyz
     deepak2.getdata(); // deepak2 1 xyz
 
