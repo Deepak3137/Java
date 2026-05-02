@@ -3,6 +3,10 @@ class student {
   int rollno;
   static String schoolName;
 
+  static { //used for initilize the static variable , this called only once . doesn't depend on how many object you created.
+    schoolName = "xyz";
+  }
+
   public void getdata() {
     System.out.println(name + " : " + rollno + " : " + schoolName);
   }
@@ -32,6 +36,16 @@ public class staticc {
 
     deepak.getdata(); // deepak 1 xyz
     deepak2.getdata(); // deepak2 1 xyz
+
+
+    //static block execute when the class load in the class loader. this is done when we create the object.
+    // this is done only one time, then when we again create the new object, class is already loaded.
+    // when we load the class, then there this static block is called.
+    // if we don't make object of the class, the static block is not executed.
+    // but we explicitly load the class without creating the object.
+    //this is done by the class class.
+
+    // Class.forName(student); this will load the student class.
 
   }
 }
