@@ -23,5 +23,8 @@ public class inheritenceBasics {
     dog d = new dog();
     d.eat(); // eating...
     d.bark(); // barking...
+
+
+    //this is single level inheritence, we can also extends animal class in another class and then that class can be extended by another class and so on. this is called multi level inheritence.
   }
 }
