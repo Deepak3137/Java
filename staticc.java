@@ -1,0 +1,35 @@
+class student {
+  String name;
+  int rollno;
+  static String schoolName;
+
+  public void getdata() {
+    System.out.println(name + " : " + rollno + " : " + schoolName);
+  }
+
+  //static member function
+  public static void data() {
+    // System.out.println(name + " : " + rollno + " : " + schoolName); 
+    // this is wrong since we use static variable in static function
+    // for using instance variable pass the obj of the instance you want the data from when calling data()
+  }
+}
+
+public class staticc {
+  public static void main(String[] args) {
+    student deepak = new student();
+    student deepak2 = new student();
+
+    deepak.name = "deepak";
+    deepak.rollno = 1;
+    deepak.schoolName = "abc";
+
+    deepak2.name = "deepak2";
+    deepak2.rollno = 2;
+    deepak2.schoolName = "xyz";
+
+    deepak.getdata(); // deepak 1 xyz
+    deepak2.getdata(); // deepak2 1 xyz
+
+  }
+}
