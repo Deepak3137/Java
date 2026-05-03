@@ -11,7 +11,7 @@ public class abstractKeyword {
       abstract void eat();
     }
 
-    class dog extends animal {
+    class dog extends animal { // concrete class
       void eat() {
         System.out.println("barking...");
       }
