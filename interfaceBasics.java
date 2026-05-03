@@ -20,6 +20,15 @@ class MyClass implements A {
   }
 }
 
+interface B extends A {
+  void myMethod2();
+  // we can also extend an interface using the extends keyword. the syntax for
+  // extending an interface is as follows:
+  // interface InterfaceName extends Interface1, Interface2, ... {
+  // // declaration of abstract methods and static constants
+  // }
+}
+
 public class interfaceBasics {
   public static void main(String[] args) {
     // interface is a collection of abstract methods and static constants. it is
