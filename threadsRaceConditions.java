@@ -40,7 +40,8 @@ public class threadsRaceConditions {
     thread2.start();
 
     try {
-      thread1.join();
+      thread1.join();// join() method is used to wait for the thread to finish. it blocks the current
+                     // thread until the thread on which it is called is finished.
       thread2.join();
     } catch (InterruptedException e) {
       e.printStackTrace();
