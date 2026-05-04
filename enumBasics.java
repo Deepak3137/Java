@@ -1,5 +1,7 @@
 public class enumBasics {
   enum Day {
+    // here these are objects of the enum type Day. we can also declare a
+    // constructor and methods in the enum type.
     SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
   }
 
