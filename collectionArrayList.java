@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class collectionArrayList {
   public static void main(String[] args) {
@@ -12,7 +13,11 @@ public class collectionArrayList {
     // List provides diifferent methods to manipulate the list such as add(),
     // remove(), get(), size(), contains(), clear(), etc.
 
-    ArrayList<String> list = new ArrayList<>();
+    List<String> list = new ArrayList<>(); // here List is an interface and ArrayList is a class that implements the
+                                           // List interface. we can also use ArrayList<String> list = new
+                                           // ArrayList<>(); but it is recommended to use the interface type for the
+                                           // reference variable to allow for flexibility in changing the implementation
+                                           // later if needed.
     list.add("Hello");
     list.add("World");
     list.add("Java");
@@ -25,7 +30,7 @@ public class collectionArrayList {
 
     System.out.println(list.get(0)); // Hello
 
-    System.out.println(list.indexOf("Hello"));  // 0
+    System.out.println(list.indexOf("Hello")); // 0
 
     System.out.println(list.size()); // 3
 
