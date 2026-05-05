@@ -1,5 +1,11 @@
 public class collectionsBasics {
   public static void main(String[] args) {
+    // collection API -> collection and collections
+    // collection -> interface -> implemented by various classes such as List, Set,
+    // Map, Queue
+    // collections -> class -> provides various static methods to perform operations
+    // on collections such as sorting, searching, etc.
+
     // collection API in java is a set of classes and interfaces that provide a way
     // to store and manipulate groups of objects. it is part of the java.util
     // package and provides a way to organize and manage data efficiently. the
