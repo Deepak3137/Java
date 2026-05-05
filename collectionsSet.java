@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -15,26 +16,48 @@ class collectionsSet {
     // contains(), size(), clear(), etc.
 
     // HashSet is a class that implements the Set interface. it is part of the
-    // java.util package and provides a way to store and manipulate groups of objects. it
-    // does not maintain the order of insertion and does not allow duplicate elements.
+    // java.util package and provides a way to store and manipulate groups of
+    // objects. it
+    // does not maintain the order of insertion and does not allow duplicate
+    // elements.
     // it also provides various methods to perform operations on the set, such as
     // adding, removing, and searching for elements.
 
-    Set<Integer> set = new HashSet<Integer>(); // here Set is an interface and HashSet is a class that implements the Set interface.
-    //  we can also use HashSet<Integer> set = new HashSet<>(); but it is recommended to use the interface type for 
-    // the reference variable to allow for flexibility in changing the implementation later if needed.
+    Set<Integer> set = new HashSet<Integer>(); // here Set is an interface and HashSet is a class that implements the
+                                               // Set interface.
+    // we can also use HashSet<Integer> set = new HashSet<>(); but it is recommended
+    // to use the interface type for
+    // the reference variable to allow for flexibility in changing the
+    // implementation later if needed.
     set.add(3);
     set.add(2);
     set.add(1);
-    set.add(2); // duplicate element, will not be added to the set    
+    set.add(2); // duplicate element, will not be added to the set
+
+    // sett.get(0); // this will give an error because Set does not have a get()
+    // method. we can only use the contains() method to check if an element is
+    // present in the set or not.
 
     System.out.println(set); // [3, 2, 1] - the order of insertion is not maintained
 
+    Iterator<Integer> it = set.iterator(); // we can also use an iterator to iterate over the set. the iterator does not
+                                           // maintain the order of insertion.
+    while (it.hasNext()) {
+      System.out.println(it.next()); // 3 2 1 - the order of insertion is not maintained
+    }
+    // Iterating over a set using for-each loop
+    for (Integer i : set) {
+      System.out.println(i); // 3 2 1 - the order of insertion is not maintained
+    }
 
-    Set<Integer> set2 = new TreeSet<Integer>(); // here Set is an interface and TreeSet is a class that implements the Set interface. we can also use TreeSet<Integer> set2 = new TreeSet<>(); but it is recommended to use the interface type for the reference variable to allow for flexibility in changing the implementation later if needed.
+    Set<Integer> set2 = new TreeSet<Integer>(); // here Set is an interface and TreeSet is a class that implements the
+                                                // Set interface. we can also use TreeSet<Integer> set2 = new
+                                                // TreeSet<>(); but it is recommended to use the interface type for the
+                                                // reference variable to allow for flexibility in changing the
+                                                // implementation later if needed.
     set2.add(3);
     set2.add(1);
-    set2.add(2);  
+    set2.add(2);
     set2.add(2); // duplicate element, will not be added to the set
 
     System.out.println(set2); // [1, 2, 3]
