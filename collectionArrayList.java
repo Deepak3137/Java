@@ -25,6 +25,8 @@ public class collectionArrayList {
 
     System.out.println(list.get(0)); // Hello
 
+    System.out.println(list.indexOf("Hello"));  // 0
+
     System.out.println(list.size()); // 3
 
     System.out.println(list.contains("World")); // true
