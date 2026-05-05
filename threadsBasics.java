@@ -87,12 +87,15 @@ public class threadsBasics {
     // method of the
     // thread.
 
-    // we can also pass the thread name as an argument to the Thread constructor. for example,
+    // we can also pass the thread name as an argument to the Thread constructor.
+    // for example,
     // Thread t4 = new Thread(r1, "MyThread");
-    // t4.start(); // start() method is used to start the thread. it calls the run() method of the
-                // thread.
-    // and in the run() method, we can get the thread name using the getName() method. for example,
-    // System.out.println("Thread name: " + Thread.currentThread().getName());    
+    // t4.start(); // start() method is used to start the thread. it calls the run()
+    // method of the
+    // thread.
+    // and in the run() method, we can get the thread name using the getName()
+    // method. for example,
+    // System.out.println("Thread name: " + Thread.currentThread().getName());
 
   }
 }
