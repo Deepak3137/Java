@@ -8,16 +8,27 @@ public class abstractKeyword {
 
     // example
     abstract class animal {
+      int count;
+      animal() {
+        System.out.println("hello");
+      }
       abstract void eat();
     }
 
     class dog extends animal { // concrete class
+      dog(){
+        super();
+      }
       void eat() {
         System.out.println("barking...");
       }
     }
+
+    // constructor of the abstract class cannot be called directly, but it can be
+    // called from the constructor of the subclass
     // animal a = new animal(); // error: cannot instantiate the type animal
     animal a = new dog();
     a.eat(); // barking...
+    System.out.println(a.count); // 0
   }
 }
